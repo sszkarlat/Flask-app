@@ -19,7 +19,8 @@ Jeżeli jednak nie mamy zainstalowanego frameworka Flaska to wprowadzamy komend�
 pip install flask
 ```
 
-## app.py :anchor:
+## Pliki projektu
+### app.py :anchor:
 W pliku app.py powinniśmy pamiętać o importach
 
 ```python
@@ -58,7 +59,7 @@ def index():
     return render_template("index.html")
 ```
 
-## index.html :green_heart:
+### index.html :green_heart:
 Nasza stronka index.html, będzie zgodnie z konwencją, tą stroną, która uruchamia się jako pierwsza po wczytaniu witryny. W naszym projekcie umieściliśmy na tej właśnie stronie formularz, w którym prosimy użytkownika o podanie swojego imienia.
 ```html
 <!DOCTYPE html>
@@ -114,7 +115,7 @@ Po tych zmianach plik index.html będzie prezentował się o wiele krócej, pró
 {% endblock %}
 ```
 
-## greet.html :wave:
+### greet.html :wave:
 Jeżeli użytkownik wprowadzi swoje imię na stronie pojawia się fraza: "Hello, {name}".<br>
 Jeżeli użytkownik wyśle pusty formularz, otrzyma komunikat "Hello, world". Plik greet.html
 ```html
