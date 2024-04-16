@@ -63,7 +63,8 @@ Nasza stronka index.html, będzie zgodnie z konwencją, tą stroną, która uruc
 </html>
 ```
 
-Przy tej okazji warto wspomnieć o [Jinja](https://boringowl.io/blog/jinja)<br>. Nie będę się tutaj rozwodził o samej składni czy strukturze, wspomnę jednak dlaczego z niej tutaj skorzystać. Otóż, Jijna pozwala nam unikną powielania tego samego fragmentu kodu w kilku miejscach. Dodatkowo, jeżeli będziemy musieli zmienić nazwę stron, czy stsowany na niej język czy podlinkować jakiś fragment z Bootstrap wystarczy, że zrobimy to tylko w jednym miejscu.<br>
+Przy tej okazji warto wspomnieć o [Jinja](https://boringowl.io/blog/jinja).<br>
+Nie będę się tutaj rozwodził na temat samej składni czy struktury, wspomnę jednak dlaczego warto z niej tutaj skorzystać. Otóż, Jijna pozwala nam uniknąć powielania tego samego fragmentu kodu w kilku miejscach. Dodatkowo, jeżeli będziemy musieli zmienić nazwę strony, czy stosowany na niej język czy podlinkować jakiś fragment z Bootstrap wystarczy, że zrobimy to tylko w jednym miejscu.<br>
 To proste, wystarczy, że w tej samej lokalizacji co plik index.html umieścimy plik layout.html, który będzie zawierał trzon naszej witryny.
 ```html
 <!DOCTYPE html>
@@ -81,7 +82,7 @@ To proste, wystarczy, że w tej samej lokalizacji co plik index.html umieścimy 
 
 </html>
 ```
-Po tych zmianach plik index.html będzie prezentował się o wiele krócej, prócz elementów składni Jinja będzie zawierał tylko formularz html.
+Po tych zmianach plik index.html będzie prezentował się o wiele krócej, prócz elementów składni Jinja, będzie zawierał tylko i wyłacznie formularz html.
 ```html
 {% extends "layout.html" %}
 {% block body %}
