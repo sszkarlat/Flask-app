@@ -40,7 +40,7 @@ def index():
 Tutaj dla głównej lokalizacji naszej witryny program zwróci nam wyrenderowaną stronę index.html.
 
 ## index.html
-Nasza stronka index.html, będzie zgodnie z konwencją tą stroną, która uruchamia się jako pierwsza po wczytaniu witryny. W naszym projekcie umieściliśmy tutaj formularz, w którym prosimy użytkownika o podanie swojego imienia.
+Nasza stronka index.html, będzie zgodnie z konwencją, tą stroną, która uruchamia się jako pierwsza po wczytaniu witryny. W naszym projekcie umieściliśmy na tej właśnie stronie formularz, w którym prosimy użytkownika o podanie swojego imienia.
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +63,36 @@ Nasza stronka index.html, będzie zgodnie z konwencją tą stroną, która uruch
 </html>
 ```
 
-Przy tej okazji warto wspomnieć o [Jinja](https://boringowl.io/blog/jinja)<br>
+Przy tej okazji warto wspomnieć o [Jinja](https://boringowl.io/blog/jinja)<br>. Nie będę się tutaj rozwodził o samej składni czy strukturze, wspomnę jednak dlaczego z niej tutaj skorzystać. Otóż, Jijna pozwala nam unikną powielania tego samego fragmentu kodu w kilku miejscach. Dodatkowo, jeżeli będziemy musieli zmienić nazwę stron, czy stsowany na niej język czy podlinkować jakiś fragment z Bootstrap wystarczy, że zrobimy to tylko w jednym miejscu.<br>
+To proste, wystarczy, że w tej samej lokalizacji co plik index.html umieścimy plik layout.html, który będzie zawierał trzon naszej witryny.
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Greeting</title>
+    </head>
+
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+
+</html>
+```
+Po tych zmianach plik index.html będzie prezentował się o wiele krócej, prócz elementów składni Jinja będzie zawierał tylko formularz html.
+```html
+{% extends "layout.html" %}
+{% block body %}
+
+<form action="/" method="post">
+    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+    <button type="button">Greet</button>
+</form>
+
+{% endblock %}
+```
 
 
 
