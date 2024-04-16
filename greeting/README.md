@@ -4,8 +4,8 @@ Przedstawiona tutaj apka, to wprowadzenie w tematykę aplikacji webowych opartyc
 ## Struktura projektu :newspaper:
 Projekt składać się musi z:
 - app.py - główna aplikacja posiadająca wszystkie ścieżki i powiązania pomiędzy stronami
-- static - folderu ze statyczną zawartością witryny, tj. zdjęciami, arkuszami stylów CSS
-- templates - gdzie mamy do czynienia ze stronami html
+- static - folder ze statyczną zawartością witryny, tj. zdjęciami, arkuszami stylów CSS
+- templates - katalog, w którym mamy do czynienia ze stronami html
 - requirements.txt - plik tekstowy z bibliotekami do importu
 
 ## Uruchamianie :star:
@@ -38,3 +38,32 @@ def index():
     return render_template("index.html")
 ```
 Tutaj dla głównej lokalizacji naszej witryny program zwróci nam wyrenderowaną stronę index.html.
+
+## index.html
+Nasza stronka index.html, będzie zgodnie z konwencją tą stroną, która uruchamia się jako pierwsza po wczytaniu witryny. W naszym projekcie umieściliśmy tutaj formularz, w którym prosimy użytkownika o podanie swojego imienia.
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Greeting</title>
+    </head>
+
+    <body>
+
+        <form action="/" method="post">
+            <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+        <button type="button">Greet</button>
+        
+    </form>
+    </body>
+
+</html>
+```
+
+Przy tej okazji warto wspomnieć o [Jinja](https://boringowl.io/blog/jinja)<br>
+
+
+
