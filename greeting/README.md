@@ -39,6 +39,25 @@ def index():
 ```
 Tutaj dla głównej lokalizacji naszej witryny program zwróci nam wyrenderowaną stronę index.html.
 
+Jeżeli natomiast użytkownik wyśle komunikat wyrenderowana zostanie strona greet.html.
+```python
+@app.route("/greet", methods=["POST"])
+def greet():
+    name = request.form.get("name", "world")
+    return render_template("greet.html", name=name)
+```
+Przesyłanie metodą GET nie zapewnia odpowiedniego poziomu bezpieczeństwa. Użytkownik może podać w formie hasło czy nr karty kredytowej. Metoda GET przesyła dane w adresie strony URL, umieszczając je po znaku zapytania. Dlatego my skorzystaliśmy z metody POST, która przesyła dane w sposób niezuważalny dla zwykłego użytkownika.
+
+Można nieco uprościć sprawę, tak, aby na podstawie metody renderować odpowiednią stronę. Jeżeli przesyłamy dane w formularzu (klikamy przycisk submit) to renderowana jest strona z powitaniem greet.html. Natomiast na początku załadowania witryny, renderowana jest strona główna index.html, a więc wykorzystywana jest metoda GET.
+```python
+@app.route("/", methods=["GET", "POST"])
+def index():
+    if request.method == "POST":
+        name = request.form.get("name")
+        return render_template("greet.html", name=name)
+    return render_template("index.html")
+```
+
 ## index.html
 Nasza stronka index.html, będzie zgodnie z konwencją, tą stroną, która uruchamia się jako pierwsza po wczytaniu witryny. W naszym projekcie umieściliśmy na tej właśnie stronie formularz, w którym prosimy użytkownika o podanie swojego imienia.
 ```html
@@ -91,6 +110,17 @@ Po tych zmianach plik index.html będzie prezentował się o wiele krócej, pró
     <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
     <button type="button">Greet</button>
 </form>
+
+{% endblock %}
+```
+
+## greet.html
+Jeżeli użytkownik wprowadzi swoje imię na stronie pojawia się fraza: "Hello, {name}". Jeżeli użytkownik wyśle pusty formularz, otrzyma komunikat "Hello, world". Plik greet.html
+```html
+{% extends "layout.html" %}
+{% block body %}
+
+Hello, {% if name %}{{ name }}{% else %}world{% endif %}
 
 {% endblock %}
 ```
