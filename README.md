@@ -1,2 +1,9 @@
-# Flask-app
-flask
+# Flask :sweat_drops:
+Flask to popularny [microframework](https://en.wikipedia.org/wiki/Microframework) Python do tworzenia aplikacji internetowych. Jest to elastyczny framework, który pozwala na szybkie, łatwe i przyjemne tworzenie prostych i nieco bardziej rozbudowanych aplikacji webowych. <bt>
+[Czytaj więcej...](https://flask.palletsprojects.com/en/3.0.x/) :grey_exclamation:
+
+## Flask - co to jest i jak działa? :question:
+Jak wcześniej wspomniałem służy do tworzenia aplikacji webowych w języku [Python](https://boringowl.io/tag/python). Flask wyróżnia się elastycznością i prostotą, dzięki czemu można go łatwo dostosować do indywidualnych potrzeb. Framework ten opiera się na protokole [HTTP](https://bezpiecznyinternet.edu.pl/http-vs-https/) i zapewnia wiele narzędzi, takich jak wbudowany serwer, ułatwiających tworzenie aplikacji webowych. Flask jest również dobrze dokumentowany i posiada aktywną społeczność, co ułatwia pracę z tym narzędziem. 
+
+## Flask – minimalistyczny framework Python do mikrousług :seedling:
+Choć do wielu projektów najczęściej używa się innego frameworku Python, [Django](https://boringowl.io/blog/sql-alchemy), to Flask umożliwia integrację z innymi bibliotekami np. [Jinja](https://boringowl.io/blog/jinja) i [SQLAlchemy](https://boringowl.io/blog/sql-alchemy), dzięki czemu jest w stanie z nim konkurować. Jego ogromną zaletą jest elastyczność — pozwala na eksperymentowanie z różnymi technologiami, bibliotekami i samą architekturą frameworku, co pozwala dostosować go indywidualnie do potrzeb programisty i potrzeb projektu wraz z jego rozbudową; w przypadku  Django wszelkie rozwiązania technologiczne należy wybrać na samym początku pracy z projektem. Flask oferuje wsparcie dla testów jednostkowych, obsługuje bezpieczne pliki [Cookies](https://www.morele.net/wiadomosc/pliki-cookies-co-to-jest-i-czy-trzeba-je-usuwac/17850/), wysyła żądania RESTful oraz pozwala na łatwą integrację z [API](https://smartbees.pl/blog/api) i wiele innych, dzięki czemu jest bardzo szybki i prosty do wdrożenia w produkcji. Ta mikrobiblioteka Python to dobre rozwiązanie w momencie, gdy trzeba szybko zbudować projekt na serwerze, aby pokazać, że coś działa lub kiedy nie ma wymagań biznesowych czy też są one bardzo małe. 
