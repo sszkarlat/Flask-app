@@ -58,7 +58,7 @@ def index():
     return render_template("index.html")
 ```
 
-## index.html
+## index.html :green_heart:
 Nasza stronka index.html, będzie zgodnie z konwencją, tą stroną, która uruchamia się jako pierwsza po wczytaniu witryny. W naszym projekcie umieściliśmy na tej właśnie stronie formularz, w którym prosimy użytkownika o podanie swojego imienia.
 ```html
 <!DOCTYPE html>
@@ -114,8 +114,9 @@ Po tych zmianach plik index.html będzie prezentował się o wiele krócej, pró
 {% endblock %}
 ```
 
-## greet.html
-Jeżeli użytkownik wprowadzi swoje imię na stronie pojawia się fraza: "Hello, {name}". Jeżeli użytkownik wyśle pusty formularz, otrzyma komunikat "Hello, world". Plik greet.html
+## greet.html :wave:
+Jeżeli użytkownik wprowadzi swoje imię na stronie pojawia się fraza: "Hello, {name}".<br>
+Jeżeli użytkownik wyśle pusty formularz, otrzyma komunikat "Hello, world". Plik greet.html
 ```html
 {% extends "layout.html" %}
 {% block body %}
@@ -125,5 +126,18 @@ Hello, {% if name %}{{ name }}{% else %}world{% endif %}
 {% endblock %}
 ```
 
-
-
+## Jinja :sunglasses:
+Jijna's Basic Structure
+- delimiter for variables or expressions
+```jinja 
+{{...}}
+``` 
+- delimiter for statements such as if or for
+```jinja
+{%...%}
+```
+- comments
+```jinja
+{#...#}
+```
+Read more... [manual](https://jinja.palletsprojects.com/en/3.1.x/) :innocent:
