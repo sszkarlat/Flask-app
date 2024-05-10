@@ -2,14 +2,11 @@
 
 {% block body %}
 
-{% if name %}
+<h1>Hello World!</h1>
 
-You are logged in as {{ name }}. <a href="/logout">Log out</a>.
-
-{% else %}
-
-You are not logged in. <a href="/login">Log in</a>.
-
-{% endif %}
+<form action="/login" method="post">
+    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+    <button type="submit">Log In</button>
+</form>
 
 {% endblock %}
