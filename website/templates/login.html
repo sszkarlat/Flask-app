@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% if name %}
+Hello {{ name }} <a href="/">Log out</a>
+
+{% else %}
+Hello World! <a href="/">Log in</a>
+{% endif %}
+
+
+{% endblock %}
